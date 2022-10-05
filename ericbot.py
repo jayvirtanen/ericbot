@@ -8,13 +8,12 @@ load_dotenv()
 intents = discord.Intents.all()
 intents.members = True
 
-client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'{client.user.name} has connected to Discord!')
+    print(f'{bot.user.name} has connected to Discord!')
 
 @client.event
 async def on_message(message):
@@ -32,6 +31,5 @@ async def yoooo(ctx):
     response = 'https://www.youtube.com/watch?v=MxV2u46ER9M'
     await ctx.send(response)
 
-client.run('TOKEN')
 bot.run('TOKEN')
 
