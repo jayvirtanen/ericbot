@@ -1,10 +1,8 @@
 import time
 import os
 import discord
-from dotenv import load_dotenv
 from datetime import datetime
 
-load_dotenv()
 intents = discord.Intents.all()
 intents.members = True
 
