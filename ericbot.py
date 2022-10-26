@@ -29,7 +29,7 @@ async def on_message(message):
     print(sender)
     print(t)
     hour = int(now.hour)%12
-    if sender == 'HotSaucePacket#3198' and t%2:
+    if sender == 'USERNAME' and t%2:
         await message.channel.send("Eric, it's " + str(hour).zfill(2) + ":" + str(now.minute).zfill(2))
 
 bot.run('TOKEN')
